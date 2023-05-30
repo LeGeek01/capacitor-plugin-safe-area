@@ -74,5 +74,12 @@ public class SafeAreaPlugin extends Plugin {
         ret.put(Bar_Height, safeAreaInsets.getStatusBarHeight());
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void getNavigationBarHeight(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("navigationBarHeight", safeAreaInsets.getNavigationBarHeight());
+        call.resolve(ret);
+    }
 }
 
