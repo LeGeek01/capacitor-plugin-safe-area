@@ -20,7 +20,7 @@
 
 a capacitor plugin to get SafeArea info on Android and IOS, now it's also support Capacitor v5 with version@2.0.0+
 
-if you are using Capacitor 3.x , please install version 0.0.x , and version 1.x.x for Capacitor 4.x
+if you are using Capacitor 3.x , please install version 0.0.x , and version 1.x.x for Capacitor 4.x and 5.x
 
 > I'm glad if this plugin helped you, please give it a star
 
@@ -31,7 +31,7 @@ npm install capacitor-plugin-safe-area
 npx cap sync
 ```
 
-## Useage
+## Usage
 
 ```typescript
 import { SafeArea } from 'capacitor-plugin-safe-area';
@@ -43,6 +43,10 @@ SafeArea.getSafeAreaInsets().then(({ insets }) => {
 SafeArea.getStatusBarHeight().then(({ statusBarHeight }) => {
   console.log(statusBarHeight, 'statusbarHeight');
 });
+
+SafeArea.getNavigationBarHeight().then(( { navigationBarHeight }) => { // android only
+  console.log(navigationBarHeight, 'navigationBarHeight')
+})
 
 // when safe-area changed
 const eventListener = await SafeArea.addListener('safeAreaChanged', data => {
