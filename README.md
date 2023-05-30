@@ -67,6 +67,7 @@ eventListener.remove();
 
 * [`getSafeAreaInsets()`](#getsafeareainsets)
 * [`getStatusBarHeight()`](#getstatusbarheight)
+* [`getNavigationBarHeight()`](#getnavigationbarheight)
 * [`addListener('safeAreaChanged', ...)`](#addlistenersafeareachanged)
 * [Interfaces](#interfaces)
 
@@ -97,6 +98,19 @@ getStatusBarHeight() => Promise<StatusBarInfo>
 get mobile statusbar height
 
 **Returns:** <code>Promise&lt;<a href="#statusbarinfo">StatusBarInfo</a>&gt;</code>
+
+--------------------
+
+
+### getNavigationBarHeight()
+
+```typescript
+getNavigationBarHeight() => Promise<NavigationBarInfo>
+```
+
+get android system navigation bar height
+
+**Returns:** <code>Promise&lt;<a href="#navigationbarinfo">NavigationBarInfo</a>&gt;</code>
 
 --------------------
 
@@ -144,6 +158,13 @@ event listener when safe-area changed
 | Prop                  | Type                |
 | --------------------- | ------------------- |
 | **`statusBarHeight`** | <code>number</code> |
+
+
+#### NavigationBarInfo
+
+| Prop                      | Type                |
+| ------------------------- | ------------------- |
+| **`navigationBarHeight`** | <code>number</code> |
 
 
 #### PluginListenerHandle
