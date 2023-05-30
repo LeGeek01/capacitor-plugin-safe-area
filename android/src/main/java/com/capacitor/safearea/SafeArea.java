@@ -69,6 +69,16 @@ public class SafeArea {
         return Math.round(top / density);
     }
 
+    public int getNavigationBarHeight() {
+        int top = 0;
+        float density = this.getDensity();
+        int resourceId = this.bridge.getActivity().getResources().getIdentifier("navigation_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            top = this.bridge.getActivity().getResources().getDimensionPixelSize(resourceId);
+        }
+        return Math.round(top / density);
+    }
+
     public JSObject result(int top, int left, int right, int bottom) {
         JSObject json = new JSObject();
         json.put("top", dpToPixels(top));

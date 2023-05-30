@@ -10,6 +10,10 @@ export interface SafeAreaPlugin {
    */
   getStatusBarHeight(): Promise<StatusBarInfo>;
   /**
+   * get android system navigation bar height
+   */
+  getNavigationBarHeight(): Promise<NavigationBarInfo>
+  /**
    * event listener when safe-area changed
    * @param event
    * @param listenerFunc
@@ -32,4 +36,8 @@ export interface SafeAreaInsets {
 
 export interface StatusBarInfo {
   statusBarHeight: number;
+}
+
+export interface NavigationBarInfo {
+  navigationBarHeight: number;
 }

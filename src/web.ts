@@ -1,6 +1,6 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { SafeAreaPlugin, SafeAreaInsets, StatusBarInfo } from './definitions';
+import type { SafeAreaPlugin, SafeAreaInsets, StatusBarInfo, NavigationBarInfo } from './definitions';
 
 
 export class SafeAreaWeb extends WebPlugin implements SafeAreaPlugin {
@@ -18,6 +18,12 @@ export class SafeAreaWeb extends WebPlugin implements SafeAreaPlugin {
     // throw this.unimplemented('Method not supported on Web.');
     return {
       statusBarHeight: 0
+    }
+  }
+  async getNavigationBarHeight(): Promise<NavigationBarInfo> {
+    // throw this.unimplemented('Method not supported on Web.');
+    return {
+      navigationBarHeight: 0
     }
   }
 }
